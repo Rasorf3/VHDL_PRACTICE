@@ -1,0 +1,13 @@
+|simple_car_alarm
+CLK => flag.CLK
+CLK => pr_state~1.DATAIN
+RST => flag.ACLR
+RST => pr_state~3.DATAIN
+remote => process_2.IN1
+remote => flag.DATAIN
+sensors => nx_state.OUTPUTSELECT
+sensors => nx_state.OUTPUTSELECT
+sensors => Selector2.IN2
+siren <= siren.DB_MAX_OUTPUT_PORT_TYPE
+
+

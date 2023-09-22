@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Sep 20 16:25:26 2023
+Analysis & Synthesis Status : Successful - Thu Sep 21 20:40:24 2023
 Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 Revision Name : practice
-Top-level Entity Name : simple_car_alarm
+Top-level Entity Name : veding_machine
 Family : Cyclone IV E
-Total logic elements : 5
-    Total combinational functions : 5
-    Dedicated logic registers : 4
-Total registers : 4
-Total pins : 5
+Total logic elements : 20
+    Total combinational functions : 20
+    Dedicated logic registers : 10
+Total registers : 10
+Total pins : 8
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

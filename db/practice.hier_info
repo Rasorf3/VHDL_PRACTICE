@@ -1,13 +1,21 @@
-|simple_car_alarm
-CLK => flag.CLK
+|veding_machine
 CLK => pr_state~1.DATAIN
-RST => flag.ACLR
 RST => pr_state~3.DATAIN
-remote => process_2.IN1
-remote => flag.DATAIN
-sensors => nx_state.OUTPUTSELECT
-sensors => nx_state.OUTPUTSELECT
-sensors => Selector2.IN2
-siren <= siren.DB_MAX_OUTPUT_PORT_TYPE
+nickel_in => nx_state.OUTPUTSELECT
+nickel_in => nx_state.OUTPUTSELECT
+nickel_in => nx_state.OUTPUTSELECT
+nickel_in => Selector1.IN3
+nickel_in => Selector2.IN4
+nickel_in => Selector3.IN4
+nickel_in => Selector4.IN4
+nickel_in => Selector5.IN4
+dime_in => nx_state.OUTPUTSELECT
+dime_in => nx_state.OUTPUTSELECT
+dime_in => nx_state.DATAA
+quarter_in => nx_state.DATAA
+quarter_in => nx_state.DATAA
+candy_out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+nickel_out <= nickel_out.DB_MAX_OUTPUT_PORT_TYPE
+dime_out <= dime_out.DB_MAX_OUTPUT_PORT_TYPE
 
 

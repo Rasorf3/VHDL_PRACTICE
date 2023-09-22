@@ -1,5 +1,5 @@
 Analysis & Synthesis report for practice
-Wed Sep 20 16:25:26 2023
+Thu Sep 21 20:40:24 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -13,11 +13,12 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |simple_car_alarm|pr_state
+  8. State Machine - |veding_machine|pr_state
   9. General Register Statistics
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -44,16 +45,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Sep 20 16:25:26 2023       ;
+; Analysis & Synthesis Status        ; Successful - Thu Sep 21 20:40:24 2023       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; practice                                    ;
-; Top-level Entity Name              ; simple_car_alarm                            ;
+; Top-level Entity Name              ; veding_machine                              ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 5                                           ;
-;     Total combinational functions  ; 5                                           ;
-;     Dedicated logic registers      ; 4                                           ;
-; Total registers                    ; 4                                           ;
-; Total pins                         ; 5                                           ;
+; Total logic elements               ; 20                                          ;
+;     Total combinational functions  ; 20                                          ;
+;     Dedicated logic registers      ; 10                                          ;
+; Total registers                    ; 10                                          ;
+; Total pins                         ; 8                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -67,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE22F17C6       ;                    ;
-; Top-level entity name                                            ; simple_car_alarm   ; practice           ;
+; Top-level entity name                                            ; veding_machine     ; practice           ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -152,79 +153,86 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 6           ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                 ;
-+----------------------------------+-----------------+-----------------+---------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path          ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------+---------+
-; simple_car_alarm.vhd             ; yes             ; User VHDL File  ; E:/VHDL_PRACTICE/simple_car_alarm.vhd ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                              ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
+; veding_machine.vhd               ; yes             ; User VHDL File  ; C:/Users/rasor/OneDrive/Documents/VHDL_PRACTICE/veding_machine.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 5         ;
-;                                             ;           ;
-; Total combinational functions               ; 5         ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 3         ;
-;     -- 3 input functions                    ; 0         ;
-;     -- <=2 input functions                  ; 2         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 5         ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 4         ;
-;     -- Dedicated logic registers            ; 4         ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 5         ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 4         ;
-; Total fan-out                               ; 33        ;
-; Average fan-out                             ; 1.74      ;
-+---------------------------------------------+-----------+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 20              ;
+;                                             ;                 ;
+; Total combinational functions               ; 20              ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 8               ;
+;     -- 3 input functions                    ; 10              ;
+;     -- <=2 input functions                  ; 2               ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 20              ;
+;     -- arithmetic mode                      ; 0               ;
+;                                             ;                 ;
+; Total registers                             ; 10              ;
+;     -- Dedicated logic registers            ; 10              ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 8               ;
+;                                             ;                 ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; nickel_in~input ;
+; Maximum fan-out                             ; 10              ;
+; Total fan-out                               ; 107             ;
+; Average fan-out                             ; 2.33            ;
++---------------------------------------------+-----------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                           ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name      ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+------------------+--------------+
-; |simple_car_alarm          ; 5 (5)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |simple_car_alarm   ; simple_car_alarm ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name    ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
+; |veding_machine            ; 20 (20)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |veding_machine     ; veding_machine ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------------------------------------+
-; State Machine - |simple_car_alarm|pr_state                                   ;
-+--------------------+--------------------+----------------+-------------------+
-; Name               ; pr_state.intrusion ; pr_state.armed ; pr_state.disarmed ;
-+--------------------+--------------------+----------------+-------------------+
-; pr_state.disarmed  ; 0                  ; 0              ; 0                 ;
-; pr_state.armed     ; 0                  ; 1              ; 1                 ;
-; pr_state.intrusion ; 1                  ; 0              ; 1                 ;
-+--------------------+--------------------+----------------+-------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |veding_machine|pr_state                                                                                                                                    ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+--------------+
+; Name          ; pr_state.ST45 ; pr_state.ST40 ; pr_state.ST35 ; pr_state.ST30 ; pr_state.ST25 ; pr_state.ST20 ; pr_state.ST15 ; pr_state.ST10 ; pr_state.ST5 ; pr_state.ST0 ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+--------------+
+; pr_state.ST0  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ;
+; pr_state.ST5  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1            ; 1            ;
+; pr_state.ST10 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0            ; 1            ;
+; pr_state.ST15 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0            ; 1            ;
+; pr_state.ST20 ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0            ; 1            ;
+; pr_state.ST25 ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0            ; 1            ;
+; pr_state.ST30 ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0            ; 1            ;
+; pr_state.ST35 ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 1            ;
+; pr_state.ST40 ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 1            ;
+; pr_state.ST45 ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 1            ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+--------------+
 
 
 +------------------------------------------------------+
@@ -232,14 +240,23 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 4     ;
+; Total registers                              ; 10    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Clear ; 10    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |veding_machine|nx_state   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-----------------------------------------------------+
@@ -247,17 +264,17 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 5                           ;
-; cycloneiii_ff         ; 4                           ;
-;     CLR               ; 4                           ;
-; cycloneiii_lcell_comb ; 5                           ;
-;     normal            ; 5                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 1                           ;
-;         4 data inputs ; 3                           ;
+; boundary_port         ; 8                           ;
+; cycloneiii_ff         ; 10                          ;
+;     CLR               ; 10                          ;
+; cycloneiii_lcell_comb ; 20                          ;
+;     normal            ; 20                          ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.31                        ;
+; Average LUT depth     ; 1.71                        ;
 +-----------------------+-----------------------------+
 
 
@@ -276,28 +293,29 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Wed Sep 20 16:25:19 2023
+    Info: Processing started: Thu Sep 21 20:40:13 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off practice -c practice
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file veding_machine.vhd
-    Info (12022): Found design unit 1: veding_machine-FSM File: E:/VHDL_PRACTICE/veding_machine.vhd Line: 10
-    Info (12023): Found entity 1: veding_machine File: E:/VHDL_PRACTICE/veding_machine.vhd Line: 4
+    Info (12022): Found design unit 1: veding_machine-FSM File: C:/Users/rasor/OneDrive/Documents/VHDL_PRACTICE/veding_machine.vhd Line: 10
+    Info (12023): Found entity 1: veding_machine File: C:/Users/rasor/OneDrive/Documents/VHDL_PRACTICE/veding_machine.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file simple_car_alarm.vhd
-    Info (12022): Found design unit 1: simple_car_alarm-fsm File: E:/VHDL_PRACTICE/simple_car_alarm.vhd Line: 9
-    Info (12023): Found entity 1: simple_car_alarm File: E:/VHDL_PRACTICE/simple_car_alarm.vhd Line: 4
-Info (12127): Elaborating entity "simple_car_alarm" for the top level hierarchy
+    Info (12022): Found design unit 1: simple_car_alarm-fsm File: C:/Users/rasor/OneDrive/Documents/VHDL_PRACTICE/simple_car_alarm.vhd Line: 9
+    Info (12023): Found entity 1: simple_car_alarm File: C:/Users/rasor/OneDrive/Documents/VHDL_PRACTICE/simple_car_alarm.vhd Line: 4
+Info (12021): Found 0 design units, including 0 entities, in source file traffic_light.vhd
+Info (12127): Elaborating entity "veding_machine" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 10 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 5 logic cells
+Info (21057): Implemented 28 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 3 output pins
+    Info (21061): Implemented 20 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4806 megabytes
-    Info: Processing ended: Wed Sep 20 16:25:26 2023
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Peak virtual memory: 4824 megabytes
+    Info: Processing ended: Thu Sep 21 20:40:24 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:24
 
 

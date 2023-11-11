@@ -4,15 +4,27 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "siren",
+					"name" : "candy_out",
 					"strict" : false
 				},
 				{
-					"name" : "sensors",
+					"name" : "nickel_out",
 					"strict" : false
 				},
 				{
-					"name" : "remote",
+					"name" : "dime_out",
+					"strict" : false
+				},
+				{
+					"name" : "dime_in",
+					"strict" : false
+				},
+				{
+					"name" : "nickel_in",
+					"strict" : false
+				},
+				{
+					"name" : "quarter_in",
 					"strict" : false
 				},
 				{

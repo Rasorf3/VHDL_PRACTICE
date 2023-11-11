@@ -1,5 +1,5 @@
 Assembler report for practice
-Wed Sep 20 16:25:34 2023
+Thu Sep 21 20:40:33 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: E:/VHDL_PRACTICE/output_files/practice.sof
+  5. Assembler Device Options: C:/Users/rasor/OneDrive/Documents/VHDL_PRACTICE/output_files/practice.sof
   6. Assembler Messages
 
 
@@ -38,9 +38,9 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Sep 20 16:25:34 2023 ;
+; Assembler Status      ; Successful - Thu Sep 21 20:40:33 2023 ;
 ; Revision Name         ; practice                              ;
-; Top-level Entity Name ; simple_car_alarm                      ;
+; Top-level Entity Name ; veding_machine                        ;
 ; Family                ; Cyclone IV E                          ;
 ; Device                ; EP4CE22F17C6                          ;
 +-----------------------+---------------------------------------+
@@ -53,23 +53,23 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+--------------------------------------------+
-; Assembler Generated Files                  ;
-+--------------------------------------------+
-; File Name                                  ;
-+--------------------------------------------+
-; E:/VHDL_PRACTICE/output_files/practice.sof ;
-+--------------------------------------------+
++---------------------------------------------------------------------------+
+; Assembler Generated Files                                                 ;
++---------------------------------------------------------------------------+
+; File Name                                                                 ;
++---------------------------------------------------------------------------+
+; C:/Users/rasor/OneDrive/Documents/VHDL_PRACTICE/output_files/practice.sof ;
++---------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------+
-; Assembler Device Options: E:/VHDL_PRACTICE/output_files/practice.sof ;
-+----------------+-----------------------------------------------------+
-; Option         ; Setting                                             ;
-+----------------+-----------------------------------------------------+
-; JTAG usercode  ; 0x00135056                                          ;
-; Checksum       ; 0x00135056                                          ;
-+----------------+-----------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/rasor/OneDrive/Documents/VHDL_PRACTICE/output_files/practice.sof ;
++----------------+------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                            ;
++----------------+------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x00137E52                                                                         ;
+; Checksum       ; 0x00137E52                                                                         ;
++----------------+------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Wed Sep 20 16:25:33 2023
+    Info: Processing started: Thu Sep 21 20:40:32 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off practice -c practice
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4682 megabytes
-    Info: Processing ended: Wed Sep 20 16:25:34 2023
+    Info: Peak virtual memory: 4680 megabytes
+    Info: Processing ended: Thu Sep 21 20:40:33 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
